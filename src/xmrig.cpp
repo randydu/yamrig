@@ -20,6 +20,7 @@
 #include "base/kernel/Entry.h"
 #include "base/kernel/Process.h"
 
+#include "plugin.h"
 
 int main(int argc, char **argv)
 {
@@ -33,5 +34,8 @@ int main(int argc, char **argv)
 
     App app(&process);
 
+    //setup plugins system.
+    plugin::PluginSetup ps;
+    
     return app.exec();
 }
