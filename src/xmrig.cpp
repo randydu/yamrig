@@ -35,7 +35,7 @@ int main(int argc, char **argv)
     App app(&process);
 
     //setup plugins system.
-    plugin::PluginSetup ps;
+    plugin::PluginSetup ps(Log::Level::WARNING);
     
     return app.exec();
 }
